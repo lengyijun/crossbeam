@@ -2,6 +2,7 @@
 #![allow(clippy::unit_arg)]
 #![allow(clippy::let_unit_value)]
 
+use std::prelude::v1::*;
 use core::cell::UnsafeCell;
 use core::fmt;
 use core::mem;

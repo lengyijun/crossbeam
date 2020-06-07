@@ -2,6 +2,7 @@
 //!
 //! Messages cannot be sent into this kind of channel.
 
+use std::prelude::v1::*;
 use std::marker::PhantomData;
 use std::time::Instant;
 

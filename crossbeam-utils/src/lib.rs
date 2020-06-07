@@ -37,6 +37,9 @@
 #![cfg_attr(not(feature = "std"), no_std)]
 #![cfg_attr(feature = "nightly", feature(cfg_target_has_atomic))]
 
+#![no_std]
+extern crate sgx_tstd as std;
+
 #[cfg_attr(feature = "nightly", cfg(target_has_atomic = "ptr"))]
 pub mod atomic;
 

@@ -1,9 +1,10 @@
 //! Thread-local context used in select.
 
+use std::prelude::v1::*;
 use std::cell::Cell;
 use std::sync::atomic::{AtomicUsize, Ordering};
 use std::sync::Arc;
-use std::thread::{self, Thread, ThreadId};
+use std::thread::{self, SgxThread as Thread, ThreadId};
 use std::time::Instant;
 
 use crossbeam_utils::Backoff;
@@ -39,7 +40,7 @@ impl Context {
     where
         F: FnOnce(&Context) -> R,
     {
-        thread_local! {
+        std::thread_local! {
             /// Cached thread-local context.
             static CONTEXT: Cell<Option<Context>> = Cell::new(Some(Context::new()));
         }

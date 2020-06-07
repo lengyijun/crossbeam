@@ -12,6 +12,8 @@
 ///
 /// handle.pin().flush();
 /// ```
+
+use std::prelude::v1::*;
 use core::fmt;
 
 use crate::alloc::sync::Arc;

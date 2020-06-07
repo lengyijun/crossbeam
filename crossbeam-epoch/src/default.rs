@@ -4,6 +4,7 @@
 //! is registered in the default collector.  If initialized, the thread's participant will get
 //! destructed on thread exit, which in turn unregisters the thread.
 
+use std::prelude::v1::*;
 use crate::collector::{Collector, LocalHandle};
 use crate::guard::Guard;
 use lazy_static::lazy_static;
@@ -13,7 +14,7 @@ lazy_static! {
     static ref COLLECTOR: Collector = Collector::new();
 }
 
-thread_local! {
+std::thread_local! {
     /// The per-thread participant for the default garbage collector.
     static HANDLE: LocalHandle = COLLECTOR.register();
 }

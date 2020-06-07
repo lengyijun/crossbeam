@@ -8,6 +8,7 @@
 //!   - Simplified BSD License and Apache License, Version 2.0
 //!   - http://www.1024cores.net/home/code-license
 
+use std::prelude::v1::*;
 use alloc::vec::Vec;
 use core::cell::UnsafeCell;
 use core::fmt;

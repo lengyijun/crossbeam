@@ -1,3 +1,5 @@
+
+use std::prelude::v1::*;
 use core::fmt;
 
 /// Error which occurs when popping from an empty queue.

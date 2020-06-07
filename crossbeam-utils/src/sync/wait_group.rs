@@ -1,8 +1,9 @@
 // Necessary for using `Mutex<usize>` for conditional variables
 #![allow(clippy::mutex_atomic)]
 
+use std::prelude::v1::*;
 use std::fmt;
-use std::sync::{Arc, Condvar, Mutex};
+use std::sync::{Arc, SgxCondvar as Condvar, SgxMutex as Mutex};
 
 /// Enables threads to synchronize the beginning or end of some computation.
 ///

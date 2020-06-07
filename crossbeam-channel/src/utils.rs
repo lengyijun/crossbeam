@@ -1,5 +1,6 @@
 //! Miscellaneous utilities.
 
+use std::prelude::v1::*;
 use std::cell::{Cell, UnsafeCell};
 use std::num::Wrapping;
 use std::ops::{Deref, DerefMut};
@@ -16,7 +17,7 @@ pub fn shuffle<T>(v: &mut [T]) {
         return;
     }
 
-    thread_local! {
+    std::thread_local! {
         static RNG: Cell<Wrapping<u32>> = Cell::new(Wrapping(1_406_868_647));
     }
 

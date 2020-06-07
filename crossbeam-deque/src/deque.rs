@@ -2,6 +2,7 @@
 // to read because we're mutating the range bound.
 #![allow(clippy::mut_range_bound)]
 
+use std::prelude::v1::*;
 use std::cell::{Cell, UnsafeCell};
 use std::cmp;
 use std::fmt;

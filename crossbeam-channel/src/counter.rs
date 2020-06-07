@@ -1,8 +1,9 @@
 //! Reference counter for channels.
 
+use std::prelude::v1::*;
 use std::isize;
 use std::ops;
-use std::process;
+//use std::process;
 use std::sync::atomic::{AtomicBool, AtomicUsize, Ordering};
 
 /// Reference counter internals.
@@ -52,7 +53,10 @@ impl<C> Sender<C> {
         // counter. It's very difficult to recover sensibly from such degenerate scenarios so we
         // just abort when the count becomes very large.
         if count > isize::MAX as usize {
-            process::abort();
+            unsafe{
+          libc::abort();
+            }
+            //process::abort();
         }
 
         Sender {
@@ -107,7 +111,10 @@ impl<C> Receiver<C> {
         // counter. It's very difficult to recover sensibly from such degenerate scenarios so we
         // just abort when the count becomes very large.
         if count > isize::MAX as usize {
-            process::abort();
+            unsafe{
+          libc::abort();
+            }
+            //process::abort();
         }
 
         Receiver {

@@ -1,5 +1,6 @@
 //! Interface to the select mechanism.
 
+use std::prelude::v1::*;
 use std::fmt;
 use std::marker::PhantomData;
 use std::mem;

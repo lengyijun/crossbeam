@@ -1,5 +1,6 @@
 //! Waking mechanism for threads blocked on channel operations.
 
+use std::prelude::v1::*;
 use std::sync::atomic::{AtomicBool, Ordering};
 use std::thread::{self, ThreadId};
 
@@ -276,7 +277,7 @@ impl Drop for SyncWaker {
 /// Returns the id of the current thread.
 #[inline]
 fn current_thread_id() -> ThreadId {
-    thread_local! {
+    std::thread_local! {
         /// Cached thread-local id.
         static THREAD_ID: ThreadId = thread::current().id();
     }

@@ -1,5 +1,6 @@
 //! TODO: docs
 
+use std::prelude::v1::*;
 use alloc::alloc::{alloc, dealloc, handle_alloc_error, Layout};
 use core::borrow::Borrow;
 use core::cmp;

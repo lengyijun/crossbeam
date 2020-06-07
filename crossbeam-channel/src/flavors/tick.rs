@@ -2,6 +2,7 @@
 //!
 //! Messages cannot be sent into this kind of channel; they are materialized on demand.
 
+use std::marker::PhantomData;
 use std::thread;
 use std::time::{Duration, Instant};
 

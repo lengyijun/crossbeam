@@ -96,6 +96,9 @@
 #![warn(missing_docs, missing_debug_implementations, rust_2018_idioms)]
 #![cfg_attr(not(feature = "std"), no_std)]
 
+#![no_std]
+extern crate sgx_tstd as std;
+
 use cfg_if::cfg_if;
 
 cfg_if! {

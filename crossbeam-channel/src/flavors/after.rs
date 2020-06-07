@@ -2,6 +2,7 @@
 //!
 //! Messages cannot be sent into this kind of channel; they are materialized on demand.
 
+use std::prelude::v1::*;
 use std::sync::atomic::{AtomicBool, Ordering};
 use std::thread;
 use std::time::{Duration, Instant};

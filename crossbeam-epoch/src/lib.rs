@@ -66,6 +66,9 @@
 #![cfg_attr(feature = "nightly", feature(cfg_target_has_atomic))]
 #![cfg_attr(feature = "nightly", feature(const_fn))]
 
+#![no_std]
+extern crate sgx_tstd as std;
+
 use cfg_if::cfg_if;
 
 #[cfg_attr(feature = "nightly", cfg(target_has_atomic = "ptr"))]

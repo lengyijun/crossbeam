@@ -1,5 +1,6 @@
 //! The channel interface.
 
+use std::prelude::v1::*;
 use std::fmt;
 use std::iter::FusedIterator;
 use std::mem;
