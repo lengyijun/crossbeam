@@ -46,8 +46,10 @@ path = "../crossbeam-utils"
 default-features = false
 
 [dependencies.lazy_static]
-git="https://github.com/lengyijun/lazy-static.rs"
+version = "1.1.0"
 optional = true
+features = ["spin_no_std"]
+
 
 [dependencies.scopeguard]
 version = "1.1.0"
