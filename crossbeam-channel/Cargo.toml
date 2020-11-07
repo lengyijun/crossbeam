@@ -27,8 +27,8 @@ std = ["crossbeam-utils/std"]
 cfg-if = "0.1.10"
 
 [target.'cfg(not(target_env = "sgx"))'.dependencies]
-sgx_tstd = { version = "1.0", rev = "v1.1.2", git = "https://github.com/apache/teaclave-sgx-sdk.git", features=["untrusted_fs","thread","backtrace","untrusted_time"] }
-sgx_libc = { version = "1.0", rev = "v1.1.2", git = "https://github.com/apache/teaclave-sgx-sdk.git" }
+sgx_tstd = { version = "1.0", rev = "v1.1.3", git = "https://github.com/apache/teaclave-sgx-sdk.git", features=["untrusted_fs","thread","backtrace","untrusted_time"] }
+sgx_libc = { version = "1.0", rev = "v1.1.3", git = "https://github.com/apache/teaclave-sgx-sdk.git" }
 
 [dependencies.crossbeam-utils]
 version = "0.7"
